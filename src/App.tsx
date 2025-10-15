@@ -99,7 +99,7 @@ function App() {
             <h2 className="hero-highlight">CNC</h2>
             <div className="hero-actions">
               <a
-                href="https://wa.me/595971675328?text=Hola,%20me%20interesa%20solicitar%20información%20sobre%20las%20máquinas%20CNC"
+                href="https://wa.me/595982849996?text=Hola,%20me%20interesa%20solicitar%20información%20sobre%20las%20máquinas%20CNC"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
@@ -229,7 +229,7 @@ function App() {
         <div className="container">
           <div className="contact-actions">
             <a
-              href="https://wa.me/595971675328?text=Hola,%20me%20interesa%20solicitar%20una%20cotización%20para%20las%20máquinas%20CNC"
+              href="https://wa.me/595982849996?text=Hola,%20me%20interesa%20solicitar%20una%20cotización%20para%20las%20máquinas%20CNC"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-large"
@@ -258,22 +258,46 @@ function App() {
               <h4>Productos</h4>
               <a href="#products">Cortadora Láser de Fibra</a>
               <a href="#products">Cortadoras Plasma CNC</a>
-              <a href="#products">Sistemas Completos</a>
+              <a href="#products">Grabador Láser</a>
             </div>
             <div className="footer-section">
               <h4>Servicios</h4>
-              <a href="#services">Repuestos</a>
-              <a href="#services">Capacitación</a>
-              <a href="#services">Soporte Técnico</a>
-              <a href="#services">Garantía 12 Meses</a>
+              <a href="#services">Corte Láser</a>
+              <a href="#contact">Capacitación</a>
+              <a href="#contact">Soporte Técnico</a>
+              <a href="#contact">Garantía 12 Meses</a>
             </div>
             <div className="footer-section">
               <h4>Contacto</h4>
-              <p>http://www.mewin.com/</p>
+              <a href="https://www.mewin.com.py" target="_blank" rel="noopener noreferrer">www.mewin.com.py</a>
+              <a href="https://www.mewiningenieria.com" target="_blank" rel="noopener noreferrer">www.mewiningenieria.com</a>
               <p>ingenieria@mewin.com</p>
-              <p>(0971) 675-328</p>
+              <p>(0982) 849-996</p>
               <p>Virgen Diaz Peres 358</p>
               <p>San Lorenzo - Paraguay</p>
+              <a
+                href="https://maps.app.goo.gl/S1EpdDM1yJi48pqw6?g_st=aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="location-link"
+              >
+                📍 Ver en Google Maps
+              </a>
+            </div>
+            <div className="footer-section footer-map">
+              <h4>Ubicación</h4>
+              <div className="map-container-footer">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0545875948564!2d-57.50887492474056!3d-25.337989677655287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8c5f2c3d385%3A0x9e0e6e7f5c0d9f9f!2sVirgen%20Diaz%20Perez%20358%2C%20San%20Lorenzo!5e0!3m2!1ses!2spy!4v1709123456789!5m2!1ses!2spy"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación MEWIN Ingeniería"
+                ></iframe>
+              </div>
             </div>
           </div>
           <div className="footer-bottom">
