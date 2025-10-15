@@ -68,8 +68,7 @@ function App() {
         <div className="container">
           <div className="header-content">
             <div className="logo">
-              <span className="logo-text">MEWIN</span>
-              <span className="tagline">Ingeniería</span>
+              <img src="/images/logo.png" alt="MEWIN Ingeniería" className="logo-image" />
             </div>
 
             <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
