@@ -92,6 +92,16 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero-catalog" id="home">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-video"
+        >
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">
