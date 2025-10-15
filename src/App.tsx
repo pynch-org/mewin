@@ -16,7 +16,7 @@ const products: Product[] = [
   {
     id: 1,
     name: "MEWIN Cortadora Laser de Fibra ML 1530",
-    category: "laser-engravers",
+    category: "cortadora-laser",
     price: 33700,
     image: "/images/cnc-1530.png",
     description: "Tecnología, potencia y precisión para cortes en metales. Su estructura reforzada, cabezal automático y software inteligente la convierten en la elección ideal para fabricación metálica, cartelería y producción en serie.\n\nEspecificaciones principales:\n• Área de trabajo: 1500 x 3000 mm\n• Potencias disponibles: 1500W / 2000W / 3000W\n• Cabezal: Raytools con autoenfoque"
@@ -24,7 +24,7 @@ const products: Product[] = [
   {
     id: 2,
     name: "MEWIN Cortadora Plasma CNC MP1530",
-    category: "plasma-cutters",
+    category: "cortadora-plasma",
     price: 11900,
     image: "/images/plasma-1530.png",
     description: "Potencia, Precisión y Rendimiento para tus cortes. Diseñada para trabajo continuo, combina robustez, tecnología moderna y un sistema de control preciso para lograr resultados profesionales a bajo costo operativo.\n\nEspecificaciones principales:\n• Área de trabajo: 1500 x 3000 mm\n• Cabezal: antorcha flotante con sensor óhmico\n• Control de altura THC: automático"
@@ -32,7 +32,7 @@ const products: Product[] = [
   {
     id: 3,
     name: "MEWIN Grabador Láser de Fibra",
-    category: "laser-engravers",
+    category: "grabadora-laser",
     price: 8500,
     image: "/images/grabador-laser.png",
     description: "Precisión y Personalización Profesional en Cada Grabado.\nEl Grabador Láser de Fibra MEWIN es la herramienta perfecta para personalizar y marcar productos metálicos y no metálicos con máxima definición.\n\nEspecificaciones principales:\n• Área de grabado: hasta 300 x 300 mm\n• Potencias: 30W/50W\n• Fuente láser: RAYCUS (>50.000 h de vida útil)\n• Precisión: 0,01 mm\n• Accesorio rotativo: incluido (para termos, vasos, anillos, etc.)\n• Materiales: acero inoxidable, aluminio, cobre, bronce, plata, oro, cerámica, plásticos, cuero\n• Software: Ezcad2 / LightBurn"
@@ -41,8 +41,9 @@ const products: Product[] = [
 
 const categories = [
   { id: 'all', name: 'Todos los Productos' },
-  { id: 'laser-engravers', name: 'Cortadoras Láser de Fibra' },
-  { id: 'plasma-cutters', name: 'Cortadoras Plasma CNC' }
+  { id: 'cortadora-laser', name: 'Cortadora Láser' },
+  { id: 'cortadora-plasma', name: 'Cortadora Plasma' },
+  { id: 'grabadora-laser', name: 'Grabadora Láser' }
 ]
 
 function App() {
@@ -175,9 +176,6 @@ function App() {
                     <h3 className="product-name">{product.name}</h3>
                     <p className="product-description">{product.description}</p>
                     <div className="product-footer">
-                      <span className="product-price">
-                        ${product.price.toLocaleString()}
-                      </span>
                       <a href="#contact" className="btn btn-primary btn-small">
                         Solicitar Cotización
                       </a>
@@ -204,13 +202,13 @@ function App() {
           <div className="services-grid">
             <div className="service-card">
               <div className="service-image">
-                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop" alt="Arte decorativo" />
+                <img src="/images/arte-decorativo.png" alt="Arte decorativo" />
               </div>
               <h3>Arte decorativo</h3>
             </div>
             <div className="service-card">
               <div className="service-image">
-                <img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=600&h=400&fit=crop" alt="Fabricación de piezas" />
+                <img src="/images/fabricacion-piezas.png" alt="Fabricación de piezas" />
               </div>
               <h3>Fabricación de piezas</h3>
             </div>
@@ -273,8 +271,8 @@ function App() {
               <a href="https://www.mewiningenieria.com" target="_blank" rel="noopener noreferrer">www.mewiningenieria.com</a>
               <p>ingenieria@mewin.com</p>
               <p>(0982) 849-996</p>
-              <p>Virgen Diaz Peres 358</p>
-              <p>San Lorenzo - Paraguay</p>
+              <p>Tte. Maschio, San Lorenzo 111449</p>
+              <p>Paraguay</p>
               <a
                 href="https://maps.app.goo.gl/S1EpdDM1yJi48pqw6?g_st=aw"
                 target="_blank"
@@ -288,14 +286,14 @@ function App() {
               <h4>Ubicación</h4>
               <div className="map-container-footer">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0545875948564!2d-57.50887492474056!3d-25.337989677655287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8c5f2c3d385%3A0x9e0e6e7f5c0d9f9f!2sVirgen%20Diaz%20Perez%20358%2C%20San%20Lorenzo!5e0!3m2!1ses!2spy!4v1709123456789!5m2!1ses!2spy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0!2d-57.509!3d-25.338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIwJzE2LjgiUyA1N8KwMzAnMzIuNCJX!5e0!3m2!1ses!2spy!4v1709123456789!5m2!1ses!2spy"
                   width="100%"
                   height="250"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ubicación MEWIN Ingeniería"
+                  title="Ubicación MEWIN Ingeniería - Tte. Maschio, San Lorenzo"
                 ></iframe>
               </div>
             </div>
