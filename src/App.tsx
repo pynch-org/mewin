@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import './App.css'
+import { ImageGallery } from './components/ImageGallery'
 
 // Product type definition
 interface Product {
@@ -8,6 +9,7 @@ interface Product {
   category: string
   price: number
   image: string
+  images: string[]
   description: string
 }
 
@@ -19,6 +21,17 @@ const products: Product[] = [
     category: "cortadora-laser",
     price: 33700,
     image: "/images/cnc-1530.png",
+    images: [
+      "/images/cnc-1530.png",
+      "/images/products/laser-cutter/20230628_082957.jpg",
+      "/images/products/laser-cutter/20240320_184117.jpg",
+      "/images/products/laser-cutter/20240320_184130.jpg",
+      "/images/products/laser-cutter/20240320_195216.jpg",
+      "/images/products/laser-cutter/20240822_140454.jpg",
+      "/images/products/laser-cutter/img 1.jpg",
+      "/images/products/laser-cutter/img 2.jpg",
+      "/images/products/laser-cutter/img 3.jpg"
+    ],
     description: "Tecnología, potencia y precisión para cortes en metales. Su estructura reforzada, cabezal automático y software inteligente la convierten en la elección ideal para fabricación metálica, cartelería y producción en serie.\n\nEspecificaciones principales:\n• Área de trabajo: 1500 x 3000 mm\n• Potencias disponibles: 1500W / 2000W / 3000W\n• Cabezal: Raytools con autoenfoque"
   },
   {
@@ -27,6 +40,17 @@ const products: Product[] = [
     category: "cortadora-plasma",
     price: 11900,
     image: "/images/plasma-1530.png",
+    images: [
+      "/images/plasma-1530.png",
+      "/images/products/plasma/20210917_142020.jpg",
+      "/images/products/plasma/20210917_171500.jpg",
+      "/images/products/plasma/20210917_171917.jpg",
+      "/images/products/plasma/20210917_182109.jpg",
+      "/images/products/plasma/20211007_162842.jpg",
+      "/images/products/plasma/20211108_105628.jpg",
+      "/images/products/plasma/20211210_161006.jpg",
+      "/images/products/plasma/20220428_105655.jpg"
+    ],
     description: "Potencia, Precisión y Rendimiento para tus cortes. Diseñada para trabajo continuo, combina robustez, tecnología moderna y un sistema de control preciso para lograr resultados profesionales a bajo costo operativo.\n\nEspecificaciones principales:\n• Área de trabajo: 1500 x 3000 mm\n• Cabezal: antorcha flotante con sensor óhmico\n• Control de altura THC: automático"
   },
   {
@@ -35,6 +59,13 @@ const products: Product[] = [
     category: "grabadora-laser",
     price: 8500,
     image: "/images/grabador-laser.png",
+    images: [
+      "/images/grabador-laser.png",
+      "/images/products/engraver/20210318_134818.jpg",
+      "/images/products/engraver/20210729_085303.jpg",
+      "/images/products/engraver/20210729_085307.jpg",
+      "/images/products/engraver/20220329_174447.jpg"
+    ],
     description: "Precisión y Personalización Profesional en Cada Grabado.\nEl Grabador Láser de Fibra MEWIN es la herramienta perfecta para personalizar y marcar productos metálicos y no metálicos con máxima definición.\n\nEspecificaciones principales:\n• Área de grabado: hasta 300 x 300 mm\n• Potencias: 30W/50W\n• Fuente láser: RAYCUS (>50.000 h de vida útil)\n• Precisión: 0,01 mm\n• Accesorio rotativo: incluido (para termos, vasos, anillos, etc.)\n• Materiales: acero inoxidable, aluminio, cobre, bronce, plata, oro, cerámica, plásticos, cuero\n• Software: Ezcad2 / LightBurn"
   }
 ]
@@ -103,6 +134,7 @@ function App() {
         <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
+            <img src="/images/hero-logo.png" alt="MEWIN Ingeniería" className="hero-logo" />
             <h1 className="hero-title">
               Expertos en maquinas
             </h1>
@@ -127,15 +159,12 @@ function App() {
           <h2 className="section-title">Soluciones Completas de Corte Láser</h2>
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon">01</div>
               <h3>Instalación Completa</h3>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">02</div>
               <h3>Capacitación Profesional</h3>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">03</div>
               <h3>12 Meses de Garantía</h3>
             </div>
           </div>
@@ -179,7 +208,7 @@ function App() {
               filteredProducts.map(product => (
                 <div key={product.id} className="product-card">
                   <div className="product-image">
-                    <img src={product.image} alt={product.name} />
+                    <ImageGallery images={product.images} alt={product.name} />
                   </div>
                   <div className="product-info">
                     <h3 className="product-name">{product.name}</h3>
@@ -228,6 +257,40 @@ function App() {
               <h3>Cartelería</h3>
             </div>
           </div>
+
+          {/* YouTube Videos Section */}
+          <div className="videos-section">
+            <h3 className="videos-title">Nuestros Productos en Acción</h3>
+            <div className="videos-grid">
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/2SR6zvpFkhg"
+                  title="MEWIN - Video 1"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="MEWIN - Video 2"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="MEWIN - Video 3"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -257,8 +320,8 @@ function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
-            <div className="footer-section">
-              <h4>MEWIN INGENIERÍA</h4>
+            <div className="footer-section footer-logo-section">
+              <img src="/images/logo.png" alt="MEWIN Ingeniería" className="footer-logo" />
               <p>Sistemas profesionales de corte láser de fibra CNC. Instalación completa, capacitación y garantía de 12 meses incluidos con cada máquina.</p>
             </div>
             <div className="footer-section">
@@ -295,7 +358,7 @@ function App() {
               <h4>Ubicación</h4>
               <div className="map-container-footer">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0!2d-57.509!3d-25.338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIwJzE2LjgiUyA1N8KwMzAnMzIuNCJX!5e0!3m2!1ses!2spy!4v1709123456789!5m2!1ses!2spy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0363826285937!2d-57.51115!3d-25.3382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da5d0e6c3f8bd%3A0x0!2zMjXCsDIwJzE3LjUiUyA1N8KwMzAnNDAuMSJX!5e0!3m2!1ses!2spy!4v1729987654321!5m2!1ses!2spy"
                   width="100%"
                   height="250"
                   style={{ border: 0 }}
