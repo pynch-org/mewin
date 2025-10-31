@@ -238,7 +238,7 @@ function App() {
             </div>
             <div className="service-card">
               <div className="service-image">
-                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=400&fit=crop" alt="Cartelería" />
+                <img src="/images/carteleria.jpg" alt="Cartelería" />
               </div>
               <h3>Cartelería</h3>
             </div>
