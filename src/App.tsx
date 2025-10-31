@@ -24,13 +24,7 @@ const products: Product[] = [
     images: [
       "/images/cnc-1530.png",
       "/images/products/laser-cutter/20230628_082957.jpg",
-      "/images/products/laser-cutter/20240320_184117.jpg",
-      "/images/products/laser-cutter/20240320_184130.jpg",
-      "/images/products/laser-cutter/20240320_195216.jpg",
-      "/images/products/laser-cutter/20240822_140454.jpg",
-      "/images/products/laser-cutter/img 1.jpg",
-      "/images/products/laser-cutter/img 2.jpg",
-      "/images/products/laser-cutter/img 3.jpg"
+      "/images/products/laser-cutter/20240320_184117.jpg"
     ],
     description: "Tecnología, potencia y precisión para cortes en metales. Su estructura reforzada, cabezal automático y software inteligente la convierten en la elección ideal para fabricación metálica, cartelería y producción en serie.\n\nEspecificaciones principales:\n• Área de trabajo: 1500 x 3000 mm\n• Potencias disponibles: 1500W / 2000W / 3000W\n• Cabezal: Raytools con autoenfoque"
   },
@@ -43,13 +37,7 @@ const products: Product[] = [
     images: [
       "/images/plasma-1530.png",
       "/images/products/plasma/20210917_142020.jpg",
-      "/images/products/plasma/20210917_171500.jpg",
-      "/images/products/plasma/20210917_171917.jpg",
-      "/images/products/plasma/20210917_182109.jpg",
-      "/images/products/plasma/20211007_162842.jpg",
-      "/images/products/plasma/20211108_105628.jpg",
-      "/images/products/plasma/20211210_161006.jpg",
-      "/images/products/plasma/20220428_105655.jpg"
+      "/images/products/plasma/20210917_171500.jpg"
     ],
     description: "Potencia, Precisión y Rendimiento para tus cortes. Diseñada para trabajo continuo, combina robustez, tecnología moderna y un sistema de control preciso para lograr resultados profesionales a bajo costo operativo.\n\nEspecificaciones principales:\n• Área de trabajo: 1500 x 3000 mm\n• Cabezal: antorcha flotante con sensor óhmico\n• Control de altura THC: automático"
   },
@@ -62,9 +50,7 @@ const products: Product[] = [
     images: [
       "/images/grabador-laser.png",
       "/images/products/engraver/20210318_134818.jpg",
-      "/images/products/engraver/20210729_085303.jpg",
-      "/images/products/engraver/20210729_085307.jpg",
-      "/images/products/engraver/20220329_174447.jpg"
+      "/images/products/engraver/20210729_085303.jpg"
     ],
     description: "Precisión y Personalización Profesional en Cada Grabado.\nEl Grabador Láser de Fibra MEWIN es la herramienta perfecta para personalizar y marcar productos metálicos y no metálicos con máxima definición.\n\nEspecificaciones principales:\n• Área de grabado: hasta 300 x 300 mm\n• Potencias: 30W/50W\n• Fuente láser: RAYCUS (>50.000 h de vida útil)\n• Precisión: 0,01 mm\n• Accesorio rotativo: incluido (para termos, vasos, anillos, etc.)\n• Materiales: acero inoxidable, aluminio, cobre, bronce, plata, oro, cerámica, plásticos, cuero\n• Software: Ezcad2 / LightBurn"
   }
@@ -134,7 +120,7 @@ function App() {
         <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
-            <img src="/images/hero-logo.png" alt="MEWIN Ingeniería" className="hero-logo" />
+            <img src="/images/logo.png" alt="MEWIN Ingeniería" className="hero-logo" />
             <h1 className="hero-title">
               Expertos en maquinas
             </h1>
@@ -164,9 +150,9 @@ function App() {
             <div className="feature-card">
               <h3>Capacitación Profesional</h3>
             </div>
-            <div className="feature-card">
-              <h3>12 Meses de Garantía</h3>
-            </div>
+            <a className="feature-card">
+              <h3>Garantía</h3>
+            </a>
           </div>
         </div>
       </section>
@@ -258,36 +244,81 @@ function App() {
             </div>
           </div>
 
-          {/* YouTube Videos Section */}
+          {/* YouTube Videos and Images Gallery Section */}
           <div className="videos-section">
             <h3 className="videos-title">Nuestros Productos en Acción</h3>
             <div className="videos-grid">
+              {/* YouTube Videos */}
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/EMcvC33GYDI"
+                  title="MEWIN - Cortadora Láser"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/rQsVy6NsGuI"
+                  title="MEWIN - Máquinas CNC"
+                  style={{ border: 0 }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
               <div className="video-container">
                 <iframe
                   src="https://www.youtube.com/embed/2SR6zvpFkhg"
-                  title="MEWIN - Video 1"
+                  title="MEWIN - Productos"
                   style={{ border: 0 }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
+
+              {/* Product Images */}
               <div className="video-container">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="MEWIN - Video 2"
-                  style={{ border: 0 }}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <img src="/images/products/plasma/20210917_171917.jpg" alt="MEWIN Cortadora Plasma" />
               </div>
               <div className="video-container">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="MEWIN - Video 3"
-                  style={{ border: 0 }}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <img src="/images/products/laser-cutter/20240320_184130.jpg" alt="MEWIN Cortadora Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/engraver/20210729_085307.jpg" alt="MEWIN Grabador Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/laser-cutter/20240320_195216.jpg" alt="MEWIN Cortadora Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/plasma/20210917_182109.jpg" alt="MEWIN Cortadora Plasma" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/laser-cutter/20240822_140454.jpg" alt="MEWIN Cortadora Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/plasma/20211007_162842.jpg" alt="MEWIN Cortadora Plasma" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/engraver/20220329_174447.jpg" alt="MEWIN Grabador Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/plasma/20211108_105628.jpg" alt="MEWIN Cortadora Plasma" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/laser-cutter/img 1.jpg" alt="MEWIN Cortadora Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/plasma/20211210_161006.jpg" alt="MEWIN Cortadora Plasma" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/laser-cutter/img 2.jpg" alt="MEWIN Cortadora Láser" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/plasma/20220428_105655.jpg" alt="MEWIN Cortadora Plasma" />
+              </div>
+              <div className="video-container">
+                <img src="/images/products/laser-cutter/img 3.jpg" alt="MEWIN Cortadora Láser" />
               </div>
             </div>
           </div>
@@ -358,7 +389,7 @@ function App() {
               <h4>Ubicación</h4>
               <div className="map-container-footer">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.0363826285937!2d-57.51115!3d-25.3382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da5d0e6c3f8bd%3A0x0!2zMjXCsDIwJzE3LjUiUyA1N8KwMzAnNDAuMSJX!5e0!3m2!1ses!2spy!4v1729987654321!5m2!1ses!2spy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.6311699487773!2d-57.5220816!3d-25.3523923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945daf15248e011f%3A0x3efb168c449ef303!2sMewin%20Ingenieria!5e0!3m2!1ses!2spy!4v1730000000000!5m2!1ses!2spy"
                   width="100%"
                   height="250"
                   style={{ border: 0 }}

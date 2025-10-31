@@ -311,29 +311,29 @@
 
 /* Sections */
 .section {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .section-subtitle {
   text-align: center;
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: var(--text-secondary);
 }
 
 /* Catalog Section */
 .products-section {
   background-color: var(--dark-gray);
-  padding: 2.5rem 0;
+  padding: 5rem 0;
 }
 
 .catalog-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .search-bar {
@@ -518,22 +518,22 @@
 }
 
 .videos-section {
-  margin-top: 3rem;
-  padding-top: 2.5rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
   border-top: 1px solid var(--medium-gray);
 }
 
 .videos-title {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   color: var(--text-primary);
 }
 
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .video-container {
@@ -548,13 +548,15 @@
   border: 1px solid var(--medium-gray);
 }
 
-.video-container iframe {
+.video-container iframe,
+.video-container img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  object-fit: cover;
 }
 
 .services-grid {
@@ -608,13 +610,13 @@
 /* Features Section */
 .features-section {
   background-color: var(--dark-bg);
-  padding: 2.5rem 0;
+  padding: 4rem 0;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 0;
 }
 
@@ -630,6 +632,22 @@
 .feature-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-blue);
+}
+
+.feature-card-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.feature-card-link:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+}
+
+.feature-card-link h3 {
+  color: var(--text-primary);
+  margin: 0;
 }
 
 .feature-card h3 {
@@ -929,6 +947,9 @@
   .hero-catalog {
     min-height: 50vh;
     padding-top: 100px;
+    background-image: url('/images/hero-fallback.png');
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-video {
