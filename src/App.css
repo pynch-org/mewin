@@ -945,11 +945,23 @@
   }
 
   .hero-catalog {
-    min-height: 50vh;
-    padding-top: 100px;
+    min-height: 45vh;
+    padding-top: 70px;
+    padding-bottom: 0;
     background-image: url('/images/hero-fallback.png');
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-catalog .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-content {
+    padding: 1.5rem 0;
   }
 
   .hero-video {
@@ -957,18 +969,33 @@
   }
 
   .hero-overlay {
-    background: rgba(10, 10, 10, 0.8);
+    background: rgba(10, 10, 10, 0.75);
+    bottom: 0;
   }
 
   .hero-logo {
-    width: 300px;
-    margin-bottom: 1.5rem;
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-highlight {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 0;
+  }
+
+  .btn {
+    margin: 0;
   }
 
   .btn {
@@ -993,8 +1020,25 @@
     display: none;
   }
 
+  .features-section {
+    padding: 2.5rem 0;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1rem;
   }
 
   .services-grid {
